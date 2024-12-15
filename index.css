@@ -1,0 +1,1693 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+:root{
+    --bg-color:#081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color:#00abf0;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* header section................................................................. */
+.header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    background-color: var(--second-bg-color);
+    border-radius: 5px;
+    border: 10px solid var(--second-bg-color);
+    transition: .3s;
+    
+}
+
+
+
+.logo{
+    font-size: 36px;
+    font-weight: bolder;
+    color: var(--main-color);
+    margin-left: 60px;
+
+    
+}
+
+.logo:hover{
+    color: var(--text-color);
+    box-shadow: 40px 90px 80px var(--main-color);
+    border-radius: 60px;
+    font-weight: bolder;
+    transition: 0.2s;
+
+
+}
+
+.navbar{
+    display: flex;
+}
+.navbar a{
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 30px;
+    transition: .3s;
+    color: var(--text-color);
+    
+    
+    
+}
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+    box-shadow: 40px 30px 80px var(--main-color);
+    border-radius: 60px;
+    font-weight: bolder;
+    transition: 0.2s;
+    
+}
+
+
+
+@media (max-width: 480px) {
+    .header{
+        width: 100%;
+        height: auto;
+        display: flex;
+        gap: 0px;
+        
+
+        
+        
+    }
+
+    .logo{
+        margin-left: -16px;
+        font-size: 16px;
+        flex: 1;
+        margin-right: 6px;
+    
+    }
+    .navbar{
+        flex: 2;
+        padding-right:600px;
+        gap: 2px;
+    }
+
+    
+     .navbar a{
+        font-size: 12px;
+
+
+    }
+    
+    
+}
+ /*media query for tablet screen*/
+ @media (min-width: 481px) and (max-width: 768px) {
+    .header{
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin-left: -20px;
+    
+    
+    }
+
+    .navbar {
+        
+        display: flex;
+        justify-content: center;
+          
+    }
+    
+    .navbar a {
+        font-size: 16px;
+        margin-right:10px;
+    }
+
+}
+/* media screen with min-width 768 and max-width 1024 */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header {
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 24px;
+        margin-left: -20px;
+        font-weight: bold;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: left;
+        gap: 15px;
+        margin-right: 150px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin-right: 10px;
+    }   
+}
+
+
+/* home section ........................................................ */
+section{
+    min-height: 100vh;   
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    padding:  20px 80px;
+    
+}
+.home .homecontent{
+    width: 70%;
+    position: relative;
+}
+.homecontent h1{
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 12px;
+    margin-bottom: 30px;
+}
+.homecontent h1 span{
+    color: var(--main-color);
+
+}
+
+.homecontent .textannimation{
+    position: relative;
+    width: 32.8rem;
+}
+
+.homecontent .textannimation h3{
+font-size: 28px; 
+font-weight: 500;
+-webkit-text-stroke: 0.7px var(--main-color);
+color: transparent;
+margin-left: -270px;
+}
+
+.homecontent .paragraphs p{
+    font-size: 18px;
+    margin: 10px 0px;
+    font-weight: 400;
+}
+.paragraph1 span{
+ font-weight: 600;
+ color: var(--main-color);
+}
+
+
+.homecontent .btnbox{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 28rem;
+    height: 2.6rem;
+    font-size: 18px;
+    font-weight: 800;
+    margin-top: 30px;
+    align-items: center;
+}
+.homecontent .btnbox .btn1{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    height:100%;
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    margin-right: 15px;
+    border-radius: 5px;
+    color: var(--text-color) ;
+    font-weight: 600;
+    z-index: 1;
+    padding: 10px;
+}
+.homecontent .btnbox .btn2{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    height:100% ;
+    background:var(--main-color);
+    border: -10px solid var(--main-color);
+    border-radius: 5px;
+    color: var(--bg-color) ;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.homecontent .btnbox .btn2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--text-color);
+    border-radius: 50px;
+    z-index: -1;
+    transition: .5s;   
+}
+
+.homecontent .btnbox .btn2:hover::before{
+    width: 100%;    
+}
+
+.homecontent .btnbox .btn1::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: var(--main-color);
+        border-radius: 50px;
+        z-index: -1;
+        transition: .5s;
+ }
+    
+.homecontent .btnbox .btn1:hover::before{
+        width: 100%;       
+}
+.homecontent .homesection{
+    position: absolute;
+    top: 360px;
+    left: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--main-color);    
+}
+.homecontent .homesection a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    box-shadow: 2px 2px var(--main-color);
+    border-radius:50% ;
+    margin-right: 30px;
+    font-size: 20px;
+    color: var(--main-color);
+}
+
+.homecontent .homesection a i{
+    font-size: 25px;
+    padding: 40px;
+    color: var(--text-color);  
+}
+
+.homecontent .homesection a:hover{
+
+    box-shadow: 40px 30px 80px var(--main-color);
+    border-radius: 60px;
+    font-weight: bolder;
+    transition: 0.2s;
+}
+
+ .img-home{
+    position: relative;
+    top: 0px;
+    left: 20px;
+    width: 400px;
+    height: 400px;
+    border: 5px solid var(--main-color);
+    border-radius: 50%;
+    background: transparent;
+    padding: 5px;
+    z-index: 2;
+    transition: 2s;
+    object-fit: cover;   
+} 
+
+.img-home:hover{
+    max-width: 100%;
+    background:var(--main-color);
+    z-index:-2 ;
+    border: 15px solid var(--main-color);
+    cursor: pointer;
+    box-shadow: -40px 30px 40px var(--main-color);
+    transition: 2s;
+}
+
+
+@media  (max-width: 480px) {
+    .home{
+        width: 460px; 
+        padding: 10px;
+    }
+    
+    .homecontent{
+        margin-top: -200px;
+        width: 200px;
+    }
+     
+    .homecontent h1{
+        font-size: 16px;
+    }
+    
+    .homecontent h1 span{
+        font-size: 12px;    
+    }
+    .homecontent .textannimation h3{
+        font-size: 12px;
+        margin-left: -400px;
+        margin-top: -10px;
+    } 
+    
+    .homecontent .paragraphs p{
+        font-size: 12px;
+        
+        
+    }
+    .homecontent .btnbox {
+        font-size: 10px;
+        padding: 2px;
+        width: 12rem;
+        margin-top: 10px;
+    }
+    .homecontent .homesection {
+        width: 3%;
+        height: 3%;
+        margin-top: 100px;
+        
+    }
+    .img-home1 {
+        width: 200px;
+    }
+    .img-home1 img{
+        width: 150px;
+        height: 150px;
+        margin-left: -300px;
+        margin-top: 270px;
+        
+        
+    }
+
+    
+}
+/* media query for the tablet screen */
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .home{
+        width: 100%; 
+        padding: 10px;
+    }
+    
+    .homecontent{
+        margin-top: -500px;
+        width: 200px;
+    }
+
+    .homecontent h1{
+        font-size: 30px;
+        margin-left:-70px ;
+    }
+
+    .homecontent h1 span {
+        font-size: 30px;
+        color: var(--main-color);
+    }
+
+    .homecontent .textannimation h3 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: -470px;
+    }
+
+    .homecontent .paragraphs p{
+        font-size: 14px;
+        margin-left: -60px;
+        
+    }
+    .homecontent .btnbox {
+        font-size: 10px;
+        padding: 2px;
+        width: 12rem;
+        margin-top: 20px;
+        margin-left:-50px ;
+    }
+
+
+    .homecontent .homesection {
+        width: 6%;
+        height: 6%;
+        margin-top: 70px;
+        margin-left: -60px;
+        
+    }
+    .homesection a {
+        font-size: 24px;
+        color: var(--text-color);
+    }
+
+    .img-home1 {
+        margin-top: 20px;
+    }
+
+    .img-home {
+        width: 120px;
+        border-radius: 50%;
+    }
+}
+
+/* media query for min-width 768 and max-width 1024 */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .home{
+        width: 100%; 
+        padding: 10px;
+    }
+    
+    .homecontent{
+        margin-top: -300px;
+    
+    }
+    .homecontent h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+        margin-left: 0px;
+    }
+
+    .homecontent .textannimation h3 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: -340px;
+        
+    }
+
+    .homecontent .paragraphs p {
+        font-size: 14px;
+        margin-left: 0px;
+        line-height: 23px;
+    }
+
+    .homecontent .btnbox {
+        font-size: 10px;
+        padding: 2px;
+        width: 14rem;
+        margin-top: 30px;
+        margin-left:-7px ;
+    }
+
+
+
+    .homecontent .homesection {
+        width: 8%;
+        height: 8%;
+        margin-top: 70px;
+        margin-left: 0px;
+        
+    }
+
+    .img-home1 {
+        margin-top: 200px;
+    }
+
+    .img-home {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        margin-left: -300px;
+    }
+}
+
+
+
+
+
+
+/* about section............................................................................... */
+
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--second-bg-color);
+    width: 100%;
+    height: 100%;
+}
+
+.heading{
+    font-size: 30px;
+    font-weight: 600;
+}
+.heading span{
+    color: var(--main-color);
+}
+.heading:hover{
+    box-shadow: 40px 30px 80px var(--main-color);
+    border-radius: 60px;
+    font-weight: bolder;
+    transition: 0.2s;
+}
+
+.about-img{
+    position: relative;
+    width:200px ;
+    height: 200px;
+    border-top: 2px solid var(--bg-color);
+    border-bottom: 2px solid var(--bg-color);
+    border-left: 2px solid var(--main-color);
+    border-right: 2px solid var(--main-color);
+    border-radius: 50%;
+    padding: 6px;
+    transition: 1s;
+    margin-bottom:10px ;
+}
+
+.about-img img{
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+}
+
+.about-content{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 88%;
+    height: 60%;
+    font-size: 18px;
+    font-weight: 500;
+    word-spacing: 2px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.about-content:hover{
+    box-shadow: 10px 30px 80px var(--main-color);
+    font-weight: bolder;
+    transition: 0.2s;
+}
+ h3{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 26px;
+    color: var(--main-color);   
+}
+/* media query for the mobile screen with max-width 480 */
+@media (max-width: 480px)  {
+    .about{
+        width: 100%;
+    }
+    .about-content{
+        font-size: 14px;
+    }
+    .heading{
+        margin-bottom: 140px;
+    }
+    .about-img{
+        margin-top: -130px;
+    }
+    
+}
+/* media query for the media screen min-width 481px and max-width 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    .about {
+        width:100%;
+        padding: 1rem;
+    }
+
+    .heading {
+            font-size: 20px;
+            margin-top: -66px;
+        }
+    
+    .about-img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 15px;
+        }
+     h3 {
+            font-size: 20px;
+        }
+        
+    .about-content  {
+        width: 90%;
+        font-size: 12px;
+        line-height: 14px;
+        word-spacing: 4px;
+        margin-top: 30px;
+        
+    }
+}
+
+/* media query for the screen with min-width 768px  and max-width 1024 */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .about {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .heading {
+        font-size: 26px;
+        margin-top: -240px;
+        margin-left: -160px;
+    }
+
+    .about-img {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 20px;
+        margin-left: -160px;
+    }
+    h3 {
+        font-size: 24px;
+        margin-left: -160px;
+    }
+
+    .about-content {
+        width: 70%;
+        font-size: 14px;
+        margin-top: 20px;
+        margin-left: -120px;
+        padding: 10px;
+        line-height: 20px;
+    }
+
+
+    
+}
+
+
+
+
+
+
+
+
+/* Education section........................................................................... */
+
+.education{  
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+    padding: 50px;
+}
+
+.education .education-columns{
+    margin:200px 0px 40px 780px;
+    font-size: 36px;
+    text-shadow: 2px var(--main-color);  
+}
+
+.education-columns span{
+    color: var(--main-color);
+}
+.education-columns:hover{
+    text-shadow: 10px 30px 80px var(--main-color);
+    font-weight: bolder;
+    transition: 0.2s;
+}
+.education-row{
+    width: 100%;
+    height: 100%;   
+}
+.education-box{
+    font-size: 18px;   
+}
+
+.education-content, .experience-content{
+    border-left: 2px solid var(--main-color);
+    border: 2px solid var(--second-bg-color);
+    max-width: 42%;
+    margin: 10px 0px 5px 40px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px 2px var(--main-color);
+    padding: 2px;
+    display: inline-block;
+    z-index: -1;
+}
+.education-content .year, .experience-content .year{
+    color: var(--main-color);
+    font-size: 20px;
+    z-index: 1;
+}
+
+.education-content h3, .experience-content h3{
+    font-size: 28px;
+    margin: 0px 0px 20px 4px ;
+    display: flex;
+    justify-content: left;
+    color: var(--text-color);
+}
+
+.education-content p, .experience-content p{
+    font-size: 18px;
+    font-weight: 200;
+    margin-top: 5px;
+}
+/* media query for mobile screen............................................................ */
+@media (max-width: 480px) {
+    .education {
+        width: 100%;
+        margin-top: 0px;
+        padding: 1rem;
+        
+    }
+
+    .education .education-columns {
+        margin: 0px 0px; 
+        font-size: 16px; 
+        text-align: center;
+    }
+
+    .education-row {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+
+    }
+
+    .education-content {
+        max-width: 90%; 
+        margin-left: 4px; 
+        padding: 0px; 
+        font-size: 12px;
+    }
+
+     .education-content .year, .experience-content .year {
+        font-size: 14px;
+        margin-top: -15px;
+    } 
+
+    .education-content h3, .experience-content h3 {
+        font-size: 14px; 
+        text-align: center;
+    }
+
+    .education-content p, .experience-content p {
+        font-size: 14px; 
+        text-align: justify; 
+    } 
+
+    .experience-box {
+        width: 100%;
+        margin-left: 4px;
+    }
+
+    .experience-content {
+        max-width: 90%;
+        margin: 4px auto; 
+        padding: 0px; 
+        font-size: 16px; 
+    }
+}
+
+/* media query for tablet screen............................................. */
+@media (min-width: 481px) and (max-width: 768px) {
+    .education {
+        width: 100%;
+        background-color: var(--second-bg-color);
+        
+    }
+
+    .education .education-columns {
+        font-size: 24px; 
+        text-align: center;
+    }
+
+    .education-row {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .education-content {
+        max-width: 75%; 
+        margin-left: 10px; 
+        font-size: 14px;
+    }
+
+    .education-content .year, .experience-content .year {
+        font-size: 14px;
+        margin-top: -10px;
+    } 
+
+    .education-content h3, .experience-content h3 {
+        font-size: 18px; 
+        text-align: center;
+    }
+
+    .education-content p, .experience-content p {
+        font-size: 16px; 
+        text-align: justify; 
+    } 
+
+    .experience-box {
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    .experience-content {
+        max-width: 75%;
+        margin: 10px auto; 
+        padding: 5px; 
+        font-size: 16px; 
+    }
+}
+
+
+/* media query for screen min-width 768px ans max-width 1024............................................. */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .education {
+        width: 100%;
+        
+    }
+
+    .education .education-columns {
+        margin: 60px ;
+        font-size: 28px;
+        text-align: center;
+        margin-left: 35px;
+        
+    }
+
+    .education-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .education-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .education-box {
+        font-size: 16px;
+    }
+
+    .education-content, .experience-content {
+        max-width: 48%;
+        margin: 15px;
+
+    }
+}
+
+
+/* skills section......................................................................................................................... */
+.skills{
+    min-height: auto;
+    height: 100vh;
+    width: 100%;
+    background: var(--second-bg-color);
+    padding: 2rem;
+    
+}
+
+
+
+.skills-column{
+margin-bottom: 10px;
+padding:120px 0px 10px 800px ;
+font-size: 36px;
+}
+.skills-column span{
+    color: var(--main-color)
+}
+.skills-column:hover{
+    text-shadow: 40px 30px 80px var(--main-color);
+    font-weight: bolder;
+    transition: 0.2s;
+
+
+}
+   
+
+.skills-row {
+    width: 75%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 140px;
+    position: relative;
+    flex-wrap: wrap;
+    
+    
+}
+
+
+
+.skills-box{
+    width: 100%;
+    border-left: 2px solid var(--main-color);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px var(--main-color);
+    
+    
+}
+.skills-box:hover{
+    text-shadow: 40px 30px 80px var(--main-color);
+    font-weight: bolder;
+    transition: 0.2s;
+
+}
+
+.skills-box .progress{
+    display: flex;
+    border: 3px solid var(--main-color);
+    box-shadow: 4px 4px 4px 4px var(--bg-color);
+    border-radius: 4px;
+    margin: 10px;
+    padding: 10px;
+    width: 90%;
+    height: 5px;
+    position: relative;
+}
+
+.skills-box .progress:hover{
+    border: 1px solid var(--main-color);
+    box-shadow: 10px 2px 2px  var(--main-color);
+    border-radius: 5px;
+
+}
+
+.skills-box .progress h3{
+    color: var(--text-color);
+    width: 30%;
+    display: flex;
+    justify-content: left;
+    font-size: 12px;
+    
+}
+
+.skills-box .progress h3 span{
+    color: var(--main-color);
+    margin-left: 10px;
+}
+.skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    height: 80%;
+
+}
+
+
+.skills-content .progress .bar{
+    height: 3%;
+    width: 70%;
+    border-radius: 20px;
+    border: 2px solid var(--main-color);
+    padding: 3px;
+    margin: -6px;
+    
+}
+
+.skills-content .progress .bar span{
+    height: 100%;
+    width: 70%;
+    border-radius: 20px;
+    background: var(--text-color);
+    border: 2px solid var(--text-color);
+    display: block;
+    
+    
+    
+}
+
+.skills-content .progress .bar1 span{
+    width: 90%;
+    
+}
+.skills-content .progress .bar2 span{
+    width: 70%;
+}
+.skills-content .progress .bar3 span{
+    width: 85%;
+}
+.skills-content .progress .bar4 span{
+    width: 60%;
+
+}
+
+.skills-content .progress .bar5 span{
+    width: 50%;
+}
+
+.skills-content .progress .bar6 span{
+    width: 70%;
+}
+
+
+
+/* media query for the screen with max-width 480 */
+@media screen and (max-width: 480px) {
+    .skills {
+        padding: 2rem;
+        text-align: center;
+        width: 100%;
+        
+        
+    }
+
+    .skills-column {
+        font-size: 20px; 
+        padding: 2rem; 
+    }
+
+    .skills-row {
+        margin-left: 6px;
+        flex-direction: column; 
+        align-items: center; 
+        margin-bottom: 2rem;
+        width: 100%;
+    
+        
+    
+        
+    }
+
+    .skills-box {
+        width: 100%; 
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin-left: 0px;
+        
+         
+         
+    
+    }
+
+    .progress {
+        margin-bottom: 60px; 
+        width: 100%;
+    }
+
+    .progress h3 {
+        font-size: 16px; 
+    }
+
+    .bar {
+        height: 80px;
+        width: 100%; 
+        background-color: #ddd; 
+        border-radius: 5px; 
+        overflow: hidden;
+        position: relative;
+    }
+
+    .bar span {
+        display: block;
+        height: 100%;
+        background-color: #6c63ff; 
+        width: 0; 
+    }
+    
+
+}
+
+/* media screen width min-width 481 and max-width 768 */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    
+    .skills {
+        padding: 1rem;
+    }
+
+
+    .skills-column {
+        font-size: 28px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+    }
+
+
+
+    .skills-row {
+        width: 90%;
+        margin-left: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .skills-box {
+        width: 100%;
+        padding: 10px;
+    }
+
+
+    .skills-content .progress {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .skills-content .progress h3 {
+        font-size: 14px;
+    }
+
+    .skills-content .progress .bar {
+        height: 5px;
+        width: 90%;
+        margin: 5px 0;
+    }
+
+    .skills-content .progress .bar span {
+        height: 100%;
+        width: 90%;
+    }
+
+    .skills-content .progress .bar1 span {
+        width: 80%;
+    }
+
+    .skills-content .progress .bar2 span {
+        width: 60%;
+    }
+
+    .skills-content .progress .bar3 span {
+        width: 75%;
+    }
+
+    .skills-content .progress .bar4 span {
+        width: 50%;
+    }
+
+    .skills-content .progress .bar5 span {
+        width: 40%;
+    }
+
+    .skills-content .progress .bar6 span {
+        width: 50%;
+    }
+}
+
+/* media query for screen with min-width 768px and max-width 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Adjust skills section */
+    .skills {
+        padding: 1.5rem;
+    }
+
+    /* Adjust the skills column */
+    .skills-column {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .skills-column span {
+        font-weight: bold;
+    }
+
+
+    .skills-row {
+        width: 80%;
+        margin-left: 10%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+
+    .skills-box {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+
+
+    .skills-content .progress {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .skills-content .progress h3 {
+        font-size: 16px;
+    }
+
+    .skills-content .progress .bar {
+        height: 6px;
+        width: 90%;
+        margin: 5px 0;
+    }
+
+    .skills-content .progress .bar span {
+        height: 100%;
+        width: 90%;
+    }
+
+    .skills-content .progress .bar1 span {
+        width: 85%;
+    }
+
+    .skills-content .progress .bar2 span {
+        width: 70%;
+    }
+
+    .skills-content .progress .bar3 span {
+        width: 80%;
+    }
+
+    .skills-content .progress .bar4 span {
+        width: 65%;
+    }
+
+    .skills-content .progress .bar5 span {
+        width: 60%;
+    }
+
+    .skills-content .progress .bar6 span {
+        width: 65%;
+    }
+}
+
+
+
+
+
+
+
+/* contact ........................................................................................................................................... */
+
+.contact{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contact form{
+    width: 60%;
+    margin:  0 auto;
+    
+
+}
+.contact form .heading{
+
+    font-size: 36px;
+    margin:10px 0px 40px 400px;
+
+}
+.contact form .heading:hover{
+    text-shadow: 40px 30px 80px var(--main-color);
+    font-weight: bolder;
+    transition: 0.2s;
+    background-color: var(--main-color);
+    width: 250px;
+   
+
+
+}
+
+
+.contact form .input-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+}
+
+.contact form .input-box .input-field{
+    position: relative;
+    width: 48%;
+    margin: 10px;
+
+
+}
+
+.contact form .input-box .input-field input{
+    width: 100%;
+    height: 100%;
+    color: var(--text-color);
+    background-color: var(--second-bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+    padding: 20px;
+
+    
+
+}
+.contact form .textarea-field{
+    width: 98%;
+    height: 20%;
+    margin: 5px;
+    
+}
+.contact form .textarea-field textarea{
+    width: 100%;
+    height: 100%;
+    background-color: var(--second-bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 4px; 
+    color: var(--text-color);  
+}
+
+.contact form .btn-box{
+    width: 220px;
+    height: 45px;
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+    margin:90px 0px 0px 400px;
+
+
+
+}
+.contact form .btn-box button{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-weight: bolder;
+    color:  var(--main-color);
+    background-color: var(--second-bg-color);
+    box-shadow: 0 0 10px var(--main-color) ;
+    
+}
+
+.contact form .btn-box button:hover{
+    margin-left:40px;
+    background-color: var(--main-color);
+    color: var(--second-bg-color);
+    transition: 2s;
+    box-shadow: 0 0 10px var(--main-color) ;
+    
+
+    
+}
+
+/* media query of contact for mobile screen */
+@media (max-width: 480px) {
+    .contact {
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact form {
+        width: 100%;
+    }
+
+    .contact form .heading {
+        font-size: 24px;
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+
+    .contact form .input-box {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact form .input-box .input-field {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .contact form .textarea-field {
+        width: 100%;
+        height: 150px;
+    }
+
+    .contact form .btn-box {
+        width: 100%;
+        margin: 20px auto 0;
+    }
+
+    .contact form .btn-box button {
+        font-size: 18px;
+    }
+}
+/* media query for the tablet screen */
+@media (min-width: 481px) and (max-width: 768px) {
+    .contact {
+        height: auto;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact form {
+        width: 80%;
+    }
+
+    .contact form .heading {
+        font-size: 28px;
+        margin: 0 auto 30px;
+        text-align: center;
+    }
+
+    .contact form .input-box {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact form .input-box .input-field {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .contact form .textarea-field {
+        width: 100%;
+        height: 200px;
+    }
+
+    .contact form .btn-box {
+        width: 50%;
+        margin: 30px auto 0;
+    }
+
+    .contact form .btn-box button {
+        font-size: 18px;
+    }
+}
+
+
+/* media screen min-width 768px and max-width 1024 */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contact {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .contact form {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .contact form .heading {
+        font-size: 28px;
+        text-align: center;
+        margin-left: -180px;
+        margin-top: -30px;
+    }
+
+    .contact form .input-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contact form .input-box .input-field {
+        width: 70%;
+        margin: 10px 10px;
+    }
+
+    .contact form .input-box .input-field input {
+        width: 70%;
+        height: 50px;
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .contact form .textarea-field {
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    .contact form .textarea-field textarea {
+        width: 80%;
+        height: 150px;
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .contact form .btn-box {
+        margin-top: 20px;
+        text-align: center;
+        margin-left: -2px;
+    }
+
+    
+}
+
+
+
+
+/* footer */
+
+.footer{
+    width: 100%;
+    height: 8vh;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    border: 5px solid var(--bg-color);
+    
+
+}
+    
+
+.footer .footer-text p{
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 20px 0px 0px 14px;
+
+
+}
+
+
+.footer .footer-icon{
+    margin: 10px 80px 10px 0px;
+    border: 5px solid var(--text-color);
+    padding: 20px;
+    position: relative;
+    border-radius: 5px;
+    
+    
+    
+}
+
+
+
+.footer .footer-icon a{
+    color: var(--bg-color);
+    margin-bottom: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 8px;
+    font-weight: bolder;
+
+        
+}
+
+/* media query for mobile screen......................... */
+@media (max-width: 480px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px 0;
+        border: 3px solid var(--bg-color);
+    }
+
+    .footer .footer-text p {
+        font-size: 16px;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .footer .footer-icon {
+        margin: 10px 0;
+        padding: 10px;
+        border: 3px solid var(--text-color);
+    }
+}
+
+/* media query for tablet screen */
+@media (min-width: 481px) and (max-width: 768px) {
+    .footer {
+        flex-direction: row;
+        justify-content: center;
+        height: auto;
+        padding: 15px;
+        border: 4px solid var(--bg-color);
+    }
+
+    .footer .footer-text p {
+        font-size: 18px;
+        text-align: center;
+        padding: 10px;
+        margin: 0 10px;
+    }
+
+    .footer .footer-icon {
+        margin: 10px 10px 10px 0;
+        padding: 15px;
+        border: 4px solid var(--text-color);
+    }
+}
+
+
+/* media query for screen with min-width 768px and max-width 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer {
+        height: 10vh;
+        padding: 10px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer .footer-text p {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+
+    .footer .footer-icon {
+        margin: 10px 0;
+        padding: 15px;
+        border: 3px solid var(--text-color);
+        position: static;
+        border-radius: 5px;
+    }
+
+    .footer .footer-icon a {
+        color: var(--bg-color);
+        font-size: 24px;
+        margin: 0px;
+    }
+}
+
+
+
+
